@@ -1,6 +1,6 @@
 //  Start brickCalculato function task;
 function brickCalculator(floor) {
-  var brick;
+  var bricks;
   if(floor<=10)
    bricks = 1000*15*floor; //  1-10 floors are 15feet and For 1 floor 1000 brick needed,
   else if(floor>=11&&floor<=20)
@@ -15,26 +15,28 @@ var result = brickCalculator(19);
 console.log(result);
 
 //**answer to question no 4*/
+// start tinyFriend function task 
+/**answer to question no 4*/
 function tinyFriend(array){
-  var result=[]; // array for saving result;
-  var c=0;  //counter for the result array;
-  var smallest=array[0].length; //set smallest to the first name length; 
-  for(var i=1;i<array.length;i++) //loop to find the smallest name length 
-  {    if(array[i].length<smallest)  //comparing the current name length with smallest and update samllest if needed; 
+  var result=[]; 
+  var count = 0;  
+  var smallest = array[0].length;
+  for(var i=1;i<array.length;i++)  
+  {    if(array[i].length<smallest)   
        {
-           smallest=array[i].length;
+           smallest=array[i].length;  
        }
   }
-  for(var i=0;i<array.length;i++) //loop to find the names with the samllest length
-  {
-      if(array[i].length==smallest)//if it finds a names with smallest length then it saves the name in result array and increases the counter of result array 
+      for(var i=0;i<array.length;i++) 
+        {
+      if(array[i].length==smallest) 
         { 
-            result[c]=array[i];
-            c++; 
+            result[count]=array[i];
+            count++; 
         }          
   }
-  return result; //returns result array which contains the names with smallest length
+  return result; 
 }
-var names=['Ovi','Arif','Po','Raihan','Ra'];
-var res4 = tinyFriend(names);
-console.log(res4);
+var names=['mim','kuddus','salam','rana','jim'];
+var result = tinyFriend(names);
+console.log(result);

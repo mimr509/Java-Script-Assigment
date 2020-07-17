@@ -32,14 +32,14 @@ console.log(woodRequired);
 // ans to the question no -3;
 //  Start brickCalculato function task;
 function brickCalculator(floor) {
-  var brick;
+  var bricks;
   if(floor<=10)
-   bricks = 1000*15*floor; //  1-10 floors are 15feet and each floor needed 1000 bricks,
+   bricks = 1000*15*floor; //  1-10 floors are 15feet and each feet needed 1000 bricks,
   else if(floor>=11&&floor<=20)
-   bricks = 1000*12*floor; //  11-20 floors are 12feet and each floor needed 1000 bricks,
+   bricks = 1000*12*floor; //  11-20 floors are 12feet and each feet needed 1000 bricks,
   else
    bricks = 1000*10*floor; //  more than 20 floors are 10feet and as always its also needed 1000 bricks
-  return bricks //returns total bricks needed;
+  return bricks //returns total bricks;
 }
 var result = brickCalculator(7);
 console.log(result);
@@ -49,10 +49,29 @@ console.log(result);
 // end brickCalculator function task;
 
 
-
-  
-
-
-
-
+// ans to the question no -4;
+// start tinyFriend function task 
+function tinyFriend(array){
+  var result=[]; 
+  var count = 0;  
+  var smallest = array[0].length;
+  for(var i=1;i<array.length;i++)  
+  {    if(array[i].length<smallest)   
+       {
+           smallest=array[i].length;  
+       }
+  }
+      for(var i=0;i<array.length;i++) 
+        {
+      if(array[i].length==smallest) 
+        { 
+            result[count]=array[i];
+            count++; 
+        }          
+  }
+  return result; 
+}
+var names=['mim','kuddus','salam','rana','jim'];
+var result = tinyFriend(names);
+console.log(result);
 
